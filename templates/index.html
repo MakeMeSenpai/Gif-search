@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% block body %}
 <!-- templates/index.html -->
 <div>
     <p>Gif search project</p>
@@ -8,6 +8,7 @@
         <button class="search-button" type="submit">Search</button>
     </form>
 </div>
+
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
@@ -17,14 +18,14 @@
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
-<p>
-    {% if json_data|length == 0 %}
+
+    {% if gifs|length == 0 %}
         <p>No gifs could be found</p>
     {% else %}
-        {% for gif in json_data %}
+        {% for gif in gifs %}
             {% include 'gif.html'  %}
         {% endfor %}
     {% endif %}
+   
 
-</p>
 {% endblock %}
