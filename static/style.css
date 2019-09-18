@@ -1,3 +1,23 @@
-body {
-    background-color: #3498db;
+/*creates an aqua background*/
+body{
+    background-color: aqua;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+/*decorates header!*/
+#h1{
+    color: rgb(255, 128, 43);
+}
+
+/*flexbox stuff to organize our results*/
+.tenor-gif-embed {
+    border: 5px;
+    border-color: rgb(255, 128, 43);
+    border-style: solid;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
 }

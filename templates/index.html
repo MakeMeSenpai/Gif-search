@@ -2,7 +2,7 @@
 {% block body %}
 <!-- templates/index.html -->
 <div>
-    <p>Gif search project</p>
+    <h1 id="h1">GIF search project!</h1>
     <form action='/'>
         <input id="search-bar" class="search-bar" type="search" name="user_input" placeholder="Search gifs: "/>
         <button class="search-button" type="submit">Search</button>
@@ -20,7 +20,7 @@
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
 
     {% if gifs|length == 0 %}
-        <p>No gifs could be found</p>
+        <p>Sorry, but no GIF's could be found.</p>
     {% else %}
         {% for gif in gifs %}
             {% include 'gif.html'  %}
