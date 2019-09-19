@@ -20,11 +20,13 @@
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
 
     {% if gifs|length == 0 %}
-        <p>Sorry, but no GIF's could be found.</p>
+        <p id="h1">Sorry, but no GIF's could be found.</p>
     {% else %}
-        {% for gif in gifs %}
+    <div class="flex">
+        {% for gif in gifs %}   
             {% include 'gif.html'  %}
         {% endfor %}
+    </div>
     {% endif %}
    
 
